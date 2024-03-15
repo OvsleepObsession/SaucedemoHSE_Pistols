@@ -16,6 +16,7 @@ public class CheckPriceTest extends BaseTest {
                 .clickCheckOut()
                 .fillingForm("Евдокия", "Ильина", "123456");
         Assert.assertEquals(getPrice(checkoutOverviewPage.getTotalPrice()),
-                getPrice(checkoutOverviewPage.getItemPrice()) + getPrice(checkoutOverviewPage.getTaxPrice()));
+                getPrice(checkoutOverviewPage.getItemTotalPrice()) +
+                        getPrice(checkoutOverviewPage.getTaxPrice()));
     }
 }
